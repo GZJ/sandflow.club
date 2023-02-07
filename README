@@ -1,0 +1,20 @@
+Quickstart
+
+1. Clone repository
+git clone https://github.com/[github id]/tildenest.space.git
+cd tildenest.space
+
+2. Generate key pair
+ssh-keygen -f ~/.ssh/id_rsa_tildenest
+
+3. Add pub key to repository
+mkdir users/[username]
+cp ~/.ssh/id_rsa_tildenest.pub users/[username]/authorized_keys
+git add users/[username]/authorized_keys
+git commit -m 'Add user [username]'
+git push
+
+4. Create pull request on github and wait until merged
+
+5. After the PR is merged, you can log in to SSH with the key
+ssh -i ~/.ssh/id_rsa_tildenest [username]@tildenest.space

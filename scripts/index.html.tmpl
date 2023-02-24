@@ -80,7 +80,7 @@
                You have two options to join: <br>
             <ul>
                <li>
-                  Push public key to <a href="https://github.com/gzj/tildenest.space">github</a> 
+                  Push public key to <a href="https://github.com/gzj/tildenest.space">github</a> or <a href="https://sr.ht/~gzj/tildenest.space">sr.ht</a> 
                </li>
                <li>
                   Email <a href="mailto:gzj00@outlook.com">me</a> user name and public key
@@ -88,27 +88,7 @@
             </ul>
             <pre>
             <code>
-            $ # Fork repository on github and clone
-            $ git clone https://github.com/[github id]/tildenest.space.git
-            $ cd tildenest.space
-            $
-            $ # Generate key pair
-            $ ssh-keygen -f ~/.ssh/id_rsa_tildenest
-            $
-            $ # Add pub key to repository
-            $ mkdir users/[username]
-            $ cp ~/.ssh/id_rsa_tildenest.pub users/[username]/authorized_keys
-            $ git add users/[username]/authorized_keys
-            $ git commit -m 'Add user [username]'
-            $ git push
-            $
-            $ # Create pull request on github and wait until merged
-            $
-            $ # After the PR is merged, you can log in to SSH with the key
-            $ ssh -i ~/.ssh/id_rsa_tildenest [username]@tildenest.space
-            $
-            $ # Vist your homepage
-            $ lynx https://tildenest.space/~[username]
+${readme}
             </code>
                         </pre>
             </p>

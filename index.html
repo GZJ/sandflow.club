@@ -80,7 +80,7 @@
                You have two options to join: <br>
             <ul>
                <li>
-                  Push public key to <a href="https://github.com/gzj/tildenest.space">github</a> 
+                  Push public key to <a href="https://github.com/gzj/tildenest.space">github</a> or <a href="https://sr.ht/~gzj/tildenest.space">sr.ht</a> 
                </li>
                <li>
                   Email <a href="mailto:gzj00@outlook.com">me</a> user name and public key
@@ -88,27 +88,31 @@
             </ul>
             <pre>
             <code>
-            $ # Fork repository on github and clone
-            $ git clone https://github.com/[github id]/tildenest.space.git
-            $ cd tildenest.space
-            $
-            $ # Generate key pair
-            $ ssh-keygen -f ~/.ssh/id_rsa_tildenest
-            $
-            $ # Add pub key to repository
-            $ mkdir users/[username]
-            $ cp ~/.ssh/id_rsa_tildenest.pub users/[username]/authorized_keys
-            $ git add users/[username]/authorized_keys
-            $ git commit -m 'Add user [username]'
-            $ git push
-            $
-            $ # Create pull request on github and wait until merged
-            $
-            $ # After the PR is merged, you can log in to SSH with the key
-            $ ssh -i ~/.ssh/id_rsa_tildenest [username]@tildenest.space
-            $
-            $ # Vist your homepage
-            $ lynx https://tildenest.space/~[username]
+$ Quickstart
+$
+$ 1. Clone repository
+$ git clone https://github.com/[github_id]/tildenest.space.git   # for GitHub
+$ git clone git@git.sr.ht:~gzj/tildenest.space                   # for SourceHut
+$ cd tildenest.space
+$
+$ 2. Generate key pair
+$ ssh-keygen -f ~/.ssh/id_rsa_tildenest
+$
+$ 3. Add the public key to the repository
+$ mkdir users/[username]
+$ cp ~/.ssh/id_rsa_tildenest.pub users/[username]/authorized_keys
+$ git add users/[username]/authorized_keys
+$ git commit -m 'Add user [username]'
+$
+$ 4. Push the commit to the repository
+$ git push                                                      # for GitHub
+$ git send-email --to="~gzj/tildenest.space@lists.sr.ht" HEAD^  # for SourceHut
+$
+$ 5. After the commit is merged, you can log into tildenest.space with the private key
+$ ssh -i ~/.ssh/id_rsa_tildenest [username]@tildenest.space
+$
+$ 6. # Vist your homepage
+$ lynx https://tildenest.space/~[username]
             </code>
                         </pre>
             </p>

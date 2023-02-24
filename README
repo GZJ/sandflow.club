@@ -1,22 +1,25 @@
-Quickstart
-
-1. Clone repository
-git clone https://github.com/[github_id]/tildenest.space.git   # for GitHub
-git clone git@git.sr.ht:~gzj/tildenest.space                   # for SourceHut
-cd tildenest.space
-
-2. Generate key pair
-ssh-keygen -f ~/.ssh/id_rsa_tildenest
-
-3. Add the public key to the repository
-mkdir users/[username]
-cp ~/.ssh/id_rsa_tildenest.pub users/[username]/authorized_keys
-git add users/[username]/authorized_keys
-git commit -m 'Add user [username]'
-
-4. Push the commit to the repository
-git push                                                      # for GitHub
-git send-email --to="~gzj/tildenest.space@lists.sr.ht" HEAD^  # for SourceHut
-
-5. After the commit is merged, you can log into tildenest.space with the private key
-ssh -i ~/.ssh/id_rsa_tildenest [username]@tildenest.space
+$ Quickstart
+$
+$ 1. Clone repository
+$ git clone https://github.com/[github_id]/tildenest.space.git   # for GitHub
+$ git clone git@git.sr.ht:~gzj/tildenest.space                   # for SourceHut
+$ cd tildenest.space
+$
+$ 2. Generate key pair
+$ ssh-keygen -f ~/.ssh/id_rsa_tildenest
+$
+$ 3. Add the public key to the repository
+$ mkdir users/[username]
+$ cp ~/.ssh/id_rsa_tildenest.pub users/[username]/authorized_keys
+$ git add users/[username]/authorized_keys
+$ git commit -m 'Add user [username]'
+$
+$ 4. Push the commit to the repository
+$ git push                                                      # for GitHub
+$ git send-email --to="~gzj/tildenest.space@lists.sr.ht" HEAD^  # for SourceHut
+$
+$ 5. After the commit is merged, you can log into tildenest.space with the private key
+$ ssh -i ~/.ssh/id_rsa_tildenest [username]@tildenest.space
+$
+$ 6. # Vist your homepage
+$ lynx https://tildenest.space/~[username]

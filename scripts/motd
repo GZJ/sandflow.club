@@ -1,0 +1,25 @@
+#!/bin/bash
+echo "Who is logged in?"
+users | tr ' ' \\n | uniq
+
+WELCOME TO
+  _______ _ _     _                      _
+ |__   __(_) |   | |                    | |
+    | |   _| | __| | ___ _ __   ___  ___| |_   ___ _ __   __ _  ___ ___
+    | |  | | |/ _` |/ _ \ '_ \ / _ \/ __| __| / __| '_ \ / _` |/ __/ _ \
+    | |  | | | (_| |  __/ | | |  __/\__ \ |_ _\__ \ |_) | (_| | (_|  __/
+    |_|  |_|_|\__,_|\___|_| |_|\___||___/\__(_)___/ .__/ \__,_|\___\___|
+                                                  | |
+                                                  |_|
+========================================================================
+
+Build profile:
+ - edit your default ~/public_html page and make your own website.
+ - edit ~/.plan or ~/.project for a custom message when people finger you.
+Users command:
+ - finger: people using `finger username`.
+ - who: display users who are currently logged in.
+ - write: communicate with a specific user.
+ - mesg: block other users write to me (e.g., mesg n).
+ - talk: interactively chat with other userse (e.g., talk gzj).
+ - wall: displays message to all logged-in users.

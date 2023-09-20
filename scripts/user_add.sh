@@ -11,5 +11,5 @@ chmod 700 /home/$NEW_USER/.ssh
 chmod 600 /home/$NEW_USER/.ssh/authorized_keys
 
 # generate index.html
-export index_users=`ls ../users | tr -s '' | awk '{printf("<a href=\"https://tildenest.space/~%s\">~%s</a>\n", $1, $1)}'`
+export index_users=`ls ../users | tr -s '' | awk '{printf("<a href=\"https://sandflow.club/~%s\">~%s</a>\n", $1, $1)}'`
 envsubst < index.html.tmpl > ../index.html

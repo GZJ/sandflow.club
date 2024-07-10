@@ -21,5 +21,5 @@ $
 $ 5. After the commit is merged, you can log into sandflow.club with the private key
 $ ssh -i ~/.ssh/id_rsa_sandflow [username]@sandflow.club
 $
-$ 6. # Vist your homepage
+$ 6. Vist your homepage
 $ lynx https://sandflow.club/~[username]
